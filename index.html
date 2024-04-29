@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>WMO Project</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="side-bar">
+            <div class="side-bar-header">
+                <div class="side-bar-main">
+                    <span class="material-icons-outlined" id="menu">list</span>Menu
+                </div>
+                <span class="material-icons-outlined" id="close-btn" onclick="CloseSideBar()">close</span>
+            </div>
+
+            
+            <ul class="menu">          
+                
+                <li class="menu-list">
+                    <span class="material-icons-outlined">home</span>Home 
+                </li>
+                <li class="menu-list"  id = "selected">
+                    <span class="material-icons-outlined">dashboard</span>Dashboard
+                </li>
+                <li class="menu-list">
+                    <span class="material-icons-outlined">settings</span>Settings
+                </li>
+            </ul>
+
+
+
+
+        </div>
+        <div class="header">
+            <div class="hamburger-icon" onclick="OpenSideBar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <div class="search-bar">
+                    <span class="material-icons-outlined">search</span>
+                    <input type="text" value="Search" id="input-search">
+                </div>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">email</span>
+                <span class="material-icons-outlined">account_circle</span>
+            </div>
+
+          
+        </div>
+        <div class="main-content">
+            <div class="main-title">
+                <h2>DASHBOARD</h2>
+            </div>
+            <div class="main-cards">
+                <div class="card">
+                    <div class="card-inner">                       
+                        <span class="material-icons-outlined" class="card-icon">calendar_month</span>
+                        <h3>CALENDAR</h3>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <span class="material-icons-outlined">done</span>  
+                        <h3>TO-DO LIST</h3>     
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <span class="material-icons-outlined">cloud</span> 
+                        <h3>WEATHER</h3>      
+                    </div>
+
+                </div>
+                
+            </div>
+            
+
+
+        </div>
+
+    </div>   
+    
+    
+    <script src="app.js"></script>
+
+</body>
+</html>
