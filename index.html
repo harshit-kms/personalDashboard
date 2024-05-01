@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
     <title>WMO Project</title>
 </head>
 <body>
@@ -43,7 +48,7 @@
             <div class="header-left">
                 <div class="search-bar">
                     <span class="material-icons-outlined">search</span>
-                    <input type="text" value="Search" id="input-search">
+                    <input type="text" placeholder="Search" id="input-search">
                 </div>
             </div>
             <div class="header-right">
@@ -59,21 +64,45 @@
                 <h2>DASHBOARD</h2>
             </div>
             <div class="main-cards">
-                <div class="card">
-                    <div class="card-inner">                       
-                        <span class="material-icons-outlined" class="card-icon">calendar_month</span>
-                        <h3>CALENDAR</h3>
+                    <div class="card" id="calendar">
+                            <div class="wrapper">             
+                                <span class="material-icons-outlined" class="card-icon">calendar_month</span>
+                                <header>
+                                    <p class="current-date">April, 2024</p>
+                                    <div class="icons">
+                                        <span class="material-icons-outlined" id="prev">chevron_left</span>
+                                        <span class="material-icons-outlined" id="next">chevron_right</span>
+                                    </div>
+                                </header>
+                                <div class="calendar">
+                                    <ul class="weeks">
+                                        <li>Sun</li>
+                                        <li>Mon</li>
+                                        <li>Tue</li>
+                                        <li>Wed</li>
+                                        <li>Thr</li>
+                                        <li>Fri</li>
+                                        <li>Sat</li>
+                                    </ul>
+                                    <ul class="days"></ul>                                        
+                                </div>
+                            </div>        
                     </div>
 
-                </div>
+                    <div class="card" id="to-do-list">
+                        <div class="wrapper">
+                            <span class="material-icons-outlined" class="card-icon">done</span>
+                            <div class="to-do-list-content">
+                                <div class="list-box">
+                                    <h3>To Do List</h3>
+                                    <input type="text" placeholder="Write here..." id="input-task">
+                                    <ul id="list"></ul>
+                                </div>    
+                            </div>
 
-                <div class="card">
-                    <div class="card-inner">
-                        <span class="material-icons-outlined">done</span>  
-                        <h3>TO-DO LIST</h3>     
+                        </div>
+
                     </div>
-
-                </div>
 
                 <div class="card">
                     <div class="card-inner">
