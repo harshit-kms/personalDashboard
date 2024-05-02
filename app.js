@@ -79,8 +79,38 @@ arrowIcon.forEach(icon => {
 
 });
 
+const todayDateElement = document.getElementById("today-date");
+
+const currentDate = new Date();
+
+const formattedDate = currentDate.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+});
+
+todayDateElement.textContent = formattedDate;
+
 
 let inputTask = document.querySelector("#input-task");
-let list = document.querySelector("#list"); 
+let list = document.querySelector("#list");
 
+inputTask.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    addItem(inputTask.value);
+    inputTask.value = "";
+  }
+});
+
+let addItem = (task) => {
+  let listItem = document.createElement("li");
+  listItem.innerText = task;
+
+  listItem.addEventListener("click", (e) => {
+    listItem.classList.toggle("done");
+  });
+
+  list.appendChild(listItem);
+};
 

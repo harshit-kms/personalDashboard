@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
 
     <title>WMO Project</title>
 </head>
@@ -89,28 +91,92 @@
                             </div>        
                     </div>
 
+                    <div class="card" id="mini-date">
+                        <div class="wrapper">
+                            <div class="today-date">
+                                <h3>Date:</h3>
+                                <p id="today-date"></p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="card" id="to-do-list">
                         <div class="wrapper">
                             <span class="material-icons-outlined" class="card-icon">done</span>
-                            <div class="to-do-list-content">
-                                <div class="list-box">
-                                    <h3>To Do List</h3>
-                                    <input type="text" placeholder="Write here..." id="input-task">
-                                    <ul id="list"></ul>
-                                </div>    
-                            </div>
+                                <div class="to-do-list-content">
+                                    <div class="list-box">
+                                        <h3>To Do List</h3>
+                                        <input type="text" placeholder="Write here..." id="input-task">
+                                        <ul id="list"></ul>
+                                    </div>    
+                                </div>
+                            
 
                         </div>
 
                     </div>
 
-                <div class="card">
-                    <div class="card-inner">
-                        <span class="material-icons-outlined">cloud</span> 
-                        <h3>WEATHER</h3>      
+                    <div class="card" id="budget-tracker">
+                        <div class="wrapper">
+                            <span class="material-icons-outlined">paid</span>   
+                                <header>
+                                    <div class="budget-box">                 
+                                        <h3>Budget</h3>
+                                        <div class="budget-input">
+                                            <form>
+                                                <select name="type">
+                                                    <option value="expenditure">Expenditure</option>
+                                                    <option value="earning">Earning</option>
+                                                </select>
+                                                <label for="item">Category:</label>
+                                                <input type="text" id="item" placeholder=" Enter ">
+                                                <div class="select-container">
+                                                    
+                                                </div>
+                                                <label for="cost">Price:</label>
+                                                <input type="number" id="cost" placeholder=" Enter the price">
+                                                <button onclick="addItem()">Add</button>
+                                            </form>
+                                            <div id="total-budget">Total Budget: $<span id="total">0</span></div>
+
+                                        </div>
+                                            
+                                    </div>        
+                                </header>
+                        </div>
+
                     </div>
 
-                </div>
+                    <div class="card" id="weather">
+                        <div class="wrapper">
+                            <span class="material-icons-outlined">cloud</span>                                
+                                    <div class="weather-box">
+                                        <h3>Weather</h3>
+                                        <h4>Chennai, Tamil Nadu</h4>
+                                        <div class="weather-description">
+                                            <h2>
+                                                35°C
+                                            </h2>
+                                            <p>
+                                                Precipitation: 1%
+                                                <br>
+                                                Humidity: 72%
+                                                <br>
+                                                Wind: 26 km/h
+                                            </p>
+                                        </div>
+                                    </div>    
+                                </div>
+                            
+
+                        </div>
+
+                
+                            
+
+                        </div>
+
+                    </div>
                 
             </div>
             
